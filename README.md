@@ -14,10 +14,38 @@ Work has just started - we will evolve with the demand :)
 * Minimum length for tags a 3 chars, tags can only be alphanumerics, illegal tags will be discarded, all tags will be converted to lower case.
 
 ### API
-* Http post on /happy with two params 
-  * happystatus:(above|average|below)
-  * tags:(string with tags)
-* Http get on /api/storemoodandtag/(above|average|below)/(string with tags)  (Example /api/storemoodandtag/above/ilovecoding)
+
+#### Store Happy Document
+
+> Endpoint
+> ```
+> POST http://localhost:3000/api/storehappydocument
+> ```
+> POST Data:
+> * happystatus: (string set: above|average|below)
+> * tags: (string)
+> * comment: (string)
+> * sensorValues: (object: {"temperature": string|number, "barometricPress": string|number, "relativeHumidity": string|number, "lightLevel": string|number})
+>
+> Example
+> ```
+> CURL -X POST http://localhost:3000/api/storehappydocument -d {"happystatus": "above", "tags": "in the morning"}
+> ```
+
+#### Store Mood and Tag
+
+> Endpoint
+> ```
+> GET http://localhost:3000/api/storemoodandtag/:mood/:tag
+> ```
+> GET Params:
+> * mood: (string set: above|average|below)
+> * tags: (string)
+>
+> Example
+> ```
+> CURL -X GET http://localhost:3000/api/storemoodandtag/above/ilovecoding
+> ```
 
 ### Deployment
 * Alter and then source 'docker-compose_env'
