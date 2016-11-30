@@ -1,6 +1,6 @@
-from kibana
+from kibana:5
 
-RUN rm /opt/kibana/config/kibana.yml
-COPY kibana.yml /opt/kibana/config/kibana.yml
+RUN rm /etc/kibana/kibana.yml
+COPY kibana.yml /etc/kibana/kibana.yml
 
 EXPOSE 5601

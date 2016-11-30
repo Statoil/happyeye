@@ -102,6 +102,20 @@ $(document).ready(function(){
      $("#tags").val($("#tags").val() + " " + $("#top10tags").val());
 	})
 
+	//Doing a bit of christmas theming
+	var d = new Date();
+	month = d.getMonth() + 1;
+	
+	if (month == 12) {
+		$("#above_click").attr("src","above12.png");
+		$("#average_click").attr("src","average12.png");
+		$("#below_click").attr("src","below12.png");
+	} else {
+		$("#above_click").attr("src","above.png");
+		$("#average_click").attr("src","average.png");
+		$("#below_click").attr("src","below.png");
+	};
+
 });
 
 
@@ -145,9 +159,9 @@ function fade_click(item){
 	<div class="panel-heading text-center"><h4>Happiness sensor</h4></div>
 	<div class="panel-body">
 		<div class="row">
-			  <div class="col-xs-12 col-xsl-4 col-sm-4"><img src="above.png" class="img-responsive img-circle center-block" id="above_click" alt="above_click" width="40%" height="40%"></div>
-			  <div class="col-xs-12 col-xsl-4 col-sm-4"><img src="average.png" class="img-responsive img-circle center-block" id="average_click" alt="above_click" width="40%" height="40%"></div>
-			  <div class="col-xs-12 col-xsl-4 col-sm-4"><img src="below.png" class="img-responsive img-circle center-block" id="below_click" alt="below_click" width="40%" height="40%"></div>				  
+			  <div class="col-xs-12 col-xsl-4 col-sm-4"><img src="above12.png" class="img-responsive img-circle center-block" id="above_click" alt="above_click" width="40%" height="40%"></div>
+			  <div class="col-xs-12 col-xsl-4 col-sm-4"><img src="average12.png" class="img-responsive img-circle center-block" id="average_click" alt="above_click" width="40%" height="40%"></div>
+			  <div class="col-xs-12 col-xsl-4 col-sm-4"><img src="below12.png" class="img-responsive img-circle center-block" id="below_click" alt="below_click" width="40%" height="40%"></div>				  
 		</div><!-- grid (row) of smile -->			
 		<div class="row">
 			<div class="col-sm-12">

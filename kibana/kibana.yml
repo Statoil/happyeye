@@ -1,3 +1,4 @@
 server.port: 5601
+server.host: kibana
 elasticsearch.url: 'http://elastic:9200'
 server.basePath: "/kibana"
