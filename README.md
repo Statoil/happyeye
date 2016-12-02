@@ -57,5 +57,5 @@ Work has just started - we will evolve with the demand :)
 
 A server component that accepts post to a given url and store meeter documents in an elaticsearch database
 
-* 'npm install' to initialise
-* 'grunt' for development with linting, watch, server reload ...
+* `npm install` to initialise
+* `grunt` for development with linting, watch, server reload ...
